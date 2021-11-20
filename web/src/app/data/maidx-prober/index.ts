@@ -1,5 +1,6 @@
 import axios, { AxiosPromise } from "axios";
 import config from "@/app.config";
+import { IResponse } from "./interface";
 
 /**
  *  舞萌DX底分对象查看器 - 查分器数据接口封装类
@@ -31,10 +32,10 @@ export default class MaiDXProberApi {
     /**
      *  获取B40数据
      * 
-     *  @returns {AxiosPromise<unknown>}
+     *  @returns {AxiosPromise<IResponse>}
      */
 
-    public b40(): AxiosPromise<unknown> {
+    public b40(): AxiosPromise<IResponse> {
         return this.request({
             userName: this.userName,
         });
@@ -43,10 +44,10 @@ export default class MaiDXProberApi {
     /**
      *  获取B50数据
      * 
-     *  @returns {AxiosPromise<unknown>}
+     *  @returns {AxiosPromise<IResponse>}
      */
 
-    public b50(): AxiosPromise<unknown> {
+    public b50(): AxiosPromise<IResponse> {
         return this.request({
             userName: this.userName,
             b50: "TRUE",
@@ -57,10 +58,10 @@ export default class MaiDXProberApi {
      *  通用接口请求封装
      * 
      *  @param {Record<string, string>} data 请求参数
-     *  @returns {AxiosPromise<unknown>}
+     *  @returns {AxiosPromise<IResponse>}
      */
 
-    private request(data: Record<string, string>): AxiosPromise<unknown> {
+    private request(data: Record<string, string>): AxiosPromise<IResponse> {
         return axios.post(config.data.prober, {data});
     }
 
