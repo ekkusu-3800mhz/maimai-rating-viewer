@@ -17,7 +17,7 @@ export default class MaiDXProberApi {
      *  @var {string}
      */
 
-    private userName: string = '';
+    private userName: string;
 
     /**
      *  构造函数
