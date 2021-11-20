@@ -5,7 +5,7 @@
  *  @license MIT
  */
 
-export enum Achievement {
+enum Achievement {
     C = 50.0,
     B = 60.0,
     BB = 70.0,
@@ -20,3 +20,5 @@ export enum Achievement {
     SSS = 100.0,
     SSSp = 100.5
 }
+
+export default Achievement

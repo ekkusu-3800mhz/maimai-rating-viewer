@@ -1,5 +1,5 @@
-import { IMusicChart } from '../data/maidx-prober/interface'
-import { Achievement } from './achievement'
+import { IMusicChart } from "@/app/data/maidx-prober/interface"
+import Achievement from "./achievement"
 
 /**
  *  舞萌DX底分对象查看器 - B50数据操作函数定义

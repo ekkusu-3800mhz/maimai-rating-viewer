@@ -1,5 +1,5 @@
-import axios, { AxiosPromise } from 'axios'
-import config from '@/app.config'
+import axios, { AxiosPromise } from "axios"
+import config from "@/app.config"
 
 /**
  *  舞萌DX底分对象查看器 - 查分器数据接口封装类
