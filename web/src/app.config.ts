@@ -7,34 +7,34 @@
 
 const config: IConfig = {
     app: {
-        debug: false
+        debug: false,
     },
     data: {
         api: {
             url: "https://api.mairating.shinra-dx.plus/",
             devUrl: "http://localhost/",
-            suffix: ".json"
+            suffix: ".json",
         },
-        prober: "https://www.diving-fish.com/api/maimaidxprober/query/player"
+        prober: "https://www.diving-fish.com/api/maimaidxprober/query/player",
     }
-}
+};
 
 /* 以下内容请勿修改 */
 
 interface IConfig {
     app: {
-        debug: boolean
-    }
+        debug: boolean;
+    };
     data: {
         api: {
-            url: string
-            devUrl: string
-            suffix: string
-        }
-        prober: string
-    }
+            url: string;
+            devUrl: string;
+            suffix: string;
+        };
+        prober: string;
+    };
 }
 
-export default config
+export default config;
 
 /* 以上内容请勿修改 */

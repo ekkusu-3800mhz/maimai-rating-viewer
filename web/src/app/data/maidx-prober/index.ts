@@ -1,5 +1,5 @@
-import axios, { AxiosPromise } from "axios"
-import config from "@/app.config"
+import axios, { AxiosPromise } from "axios";
+import config from "@/app.config";
 
 /**
  *  舞萌DX底分对象查看器 - 查分器数据接口封装类
@@ -16,7 +16,7 @@ export default class MaiDXProberApi {
      *  @var {string}
      */
 
-    private userName: string = ''
+    private userName: string = '';
 
     /**
      *  构造函数
@@ -25,7 +25,7 @@ export default class MaiDXProberApi {
      */
 
     public constructor(userName: string) {
-        this.userName = userName
+        this.userName = userName;
     }
 
     /**
@@ -36,8 +36,8 @@ export default class MaiDXProberApi {
 
     public b40(): AxiosPromise<unknown> {
         return this.request({
-            userName: this.userName
-        })
+            userName: this.userName,
+        });
     }
 
     /**
@@ -49,8 +49,8 @@ export default class MaiDXProberApi {
     public b50(): AxiosPromise<unknown> {
         return this.request({
             userName: this.userName,
-            b50: "TRUE"
-        })
+            b50: "TRUE",
+        });
     }
 
     /**
@@ -61,7 +61,7 @@ export default class MaiDXProberApi {
      */
 
     private request(data: Record<string, string>): AxiosPromise<unknown> {
-        return axios.post(config.data.prober, {data})
+        return axios.post(config.data.prober, {data});
     }
 
 }

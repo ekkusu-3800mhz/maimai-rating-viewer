@@ -1,5 +1,5 @@
-import { createRouter, createWebHashHistory } from "vue-router"
-import routes from "./routes"
+import { createRouter, createWebHashHistory } from "vue-router";
+import routes from "./routes";
 
 /**
  *  舞萌DX底分对象查看器 - 路由定义文件
@@ -10,5 +10,5 @@ import routes from "./routes"
 
 export default createRouter({
     history: createWebHashHistory(),
-    routes
-})
+    routes,
+});

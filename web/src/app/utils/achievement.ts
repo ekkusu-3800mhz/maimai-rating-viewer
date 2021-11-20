@@ -18,7 +18,7 @@ enum Achievement {
     SS = 99.0,
     SSp = 99.5,
     SSS = 100.0,
-    SSSp = 100.5
+    SSSp = 100.5,
 }
 
-export default Achievement
+export default Achievement;

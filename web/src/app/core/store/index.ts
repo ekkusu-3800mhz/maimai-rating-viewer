@@ -1,4 +1,4 @@
-import { createStore } from "vuex"
+import { createStore } from "vuex";
 
 /**
  *  舞萌DX底分对象查看器 - Vuex Store定义文件
@@ -11,21 +11,21 @@ export default createStore({
     state: () => {
         return {
             userName: '',
-            proberData: {}
+            proberData: {},
         }
     },
     mutations: {
         setUserName(state, name) {
-            state.userName = name
+            state.userName = name;
         },
         setProberData(state, data) {
-            state.proberData = data
+            state.proberData = data;
         },
         clearUserName(state) {
-            state.userName = ''
+            state.userName = '';
         },
         clearProberData(state) {
-            state.proberData = {}
-        }
+            state.proberData = {};
+        },
     }
-})
+});
