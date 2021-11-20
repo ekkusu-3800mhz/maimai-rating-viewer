@@ -9,7 +9,23 @@ import { createStore } from "vuex"
 
 export default createStore({
     state: () => {
-        return {}
+        return {
+            userName: '',
+            proberData: {}
+        }
     },
-    mutations: {}
+    mutations: {
+        setUserName(state, name) {
+            state.userName = name
+        },
+        setProberData(state, data) {
+            state.proberData = data
+        },
+        clearUserName(state) {
+            state.userName = ''
+        },
+        clearProberData(state) {
+            state.proberData = {}
+        }
+    }
 })
