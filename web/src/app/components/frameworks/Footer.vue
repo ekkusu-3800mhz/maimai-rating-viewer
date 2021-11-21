@@ -18,6 +18,7 @@
 .page-footer {
     text-align: center;
     padding-top: 2rem;
+    padding-bottom: 5rem;
 }
 p {
     margin-bottom: -14px;
@@ -26,6 +27,7 @@ p {
 @media (min-width: 768px) {
     .page-footer {
         padding-top: 3rem;
+        padding-bottom: 3rem;
     }
 }
 </style>
