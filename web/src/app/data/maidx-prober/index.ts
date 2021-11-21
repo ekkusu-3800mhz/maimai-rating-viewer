@@ -37,7 +37,7 @@ export default class MaiDXProberApi {
 
     public b40(): AxiosPromise<IResponse> {
         return this.request({
-            userName: this.userName,
+            username: this.userName,
         });
     }
 
@@ -49,7 +49,7 @@ export default class MaiDXProberApi {
 
     public b50(): AxiosPromise<IResponse> {
         return this.request({
-            userName: this.userName,
+            username: this.userName,
             b50: "TRUE",
         });
     }
@@ -62,7 +62,7 @@ export default class MaiDXProberApi {
      */
 
     private request(data: Record<string, string>): AxiosPromise<IResponse> {
-        return axios.post(config.data.prober, {data});
+        return axios.post(config.data.prober, data);
     }
 
 }
