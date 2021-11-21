@@ -8,7 +8,12 @@
 <script lang="ts" setup>
 import { IMusicChart } from "@/app/data/maidx-prober/interface";
 import { defineProps } from "vue";
-import { songCover, musicType, combo, sync, rank } from "@/app/utils/asset-map";
+import { songCover } from "@/app/utils/asset-map";
+
+import ChartType from "@/app/components/elements/ChartType.vue";
+import Combo from "@/app/components/elements/Combo.vue";
+import Rank from "@/app/components/elements/Rank.vue";
+import Sync from "@/app/components/elements/Sync.vue";
 
 const props = defineProps<{
     index: number;
@@ -46,25 +51,25 @@ function chartDifficulty(difficulty: string): string {
                         <p class="song-achievement">({{props.chart.level_label}}) {{props.chart.achievements.toFixed(4)}}%</p>
                         <p class="song-level">Lv.{{props.chart.level}} ({{props.chart.ds}}) | RATING：{{props.chart.ra}}</p>
                         <div class="song-badge">
-                            <img class="rank" :src="rank(props.chart.rate)" alt="Rank" />
+                            <Rank :value="props.chart.rate" />
                             &nbsp;&nbsp;
-                            <img class="combo" :src="combo(props.chart.fc)" alt="Combo" />
+                            <Combo :value="props.chart.fc" />
                             &nbsp;&nbsp;
-                            <img class="sync" :src="sync(props.chart.fs)" alt="Sync" />
+                            <Sync :value="props.chart.fs" />
                         </div>
                     </el-col>
                 </el-row>
                 <el-row justify="center">
                     <el-col :xs="24" class="song-badge-xs">
-                        <img class="rank" :src="rank(props.chart.rate)" alt="Rank" />
+                        <Rank :value="props.chart.rate" />
                         &nbsp;&nbsp;
-                        <img class="combo" :src="combo(props.chart.fc)" alt="Combo" />
+                        <Combo :value="props.chart.fc" />
                         &nbsp;&nbsp;
-                        <img class="sync" :src="sync(props.chart.fs)" alt="Sync" />
+                        <Sync :value="props.chart.fs" />
                     </el-col>
                 </el-row>
             </el-card>
-            <img :src="musicType(props.chart.type)" class="chart-type" alt="Chart Type" />
+            <ChartType :value="props.chart.type" class="chart-type" />
         </el-col>
     </el-row>
 </template>
@@ -98,7 +103,6 @@ function chartDifficulty(difficulty: string): string {
 }
 .chart-type {
     position: absolute;
-    height: 35px;
     bottom: -0.65rem;
     left: 0.3rem;
 }
@@ -142,15 +146,6 @@ function chartDifficulty(difficulty: string): string {
     margin-top: 1.5rem;
     padding-top: 0.5rem;
     padding-bottom: 0.3rem;
-}
-.rank {
-    height: 35px;
-}
-.combo {
-    height: 35px;
-}
-.sync {
-    height: 35px;
 }
 @media (min-width: 768px) {
     .song-cover {
