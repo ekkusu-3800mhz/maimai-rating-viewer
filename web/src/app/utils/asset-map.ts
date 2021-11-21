@@ -25,7 +25,7 @@ const musicTypeDict: Record<string, string> = {
  *  @returns {string}
  */
 
-export function musicType(type: string): string {
+export function chartType(type: string): string {
     if (type === "") {
         return "";
     }
