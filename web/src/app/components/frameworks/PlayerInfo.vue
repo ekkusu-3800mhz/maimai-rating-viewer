@@ -60,8 +60,8 @@ rating.value = (props.mode === "b50") ? props.b50Rating : (props.b40BaseRating +
 }
 .player-info > h1 {
     font-weight: 300;
-    font-size: 36px;
-    margin-top: 1rem;
+    font-size: 32px;
+    margin-top: 0.5rem;
     margin-bottom: 1.5rem;
 }
 .rating-and-grade {
@@ -72,32 +72,30 @@ rating.value = (props.mode === "b50") ? props.b50Rating : (props.b40BaseRating +
 }
 .dx-rating__b40 > p.rating-num {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     color: #ffffff;
-    margin-top: -3.6rem;
-    margin-left: 4rem;
+    margin-top: -2.95rem;
+    margin-left: 2.8rem;
     text-shadow: 0px 0px 5px #000000;
 }
 .dx-rating__b40 {
-    margin-left: 7.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
+    margin-left: 5.5rem;
+    margin-top: -1rem;
 }
 .grade__b40 {
-    margin-top: -3.7rem;
-    margin-right: 11.5rem;
+    margin-top: -2.55rem;
+    margin-right: 8rem;
 }
 .dx-rating__b50 > p.rating-num {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     color: #ffffff;
-    margin-top: -3.6rem;
-    margin-left: 3.8rem;
+    margin-top: -2.95rem;
+    margin-left: 2.8rem;
     text-shadow: 0px 0px 5px #000000;
 }
 .dx-rating__b50 {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
+    margin-top: -1rem;
 }
 @media (min-width: 768px) {
     .player-info > h1 {

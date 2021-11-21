@@ -20,7 +20,7 @@ const props = defineProps<{
 
 <style lang="less" scoped>
 img {
-    width: 110px;
+    width: 75px;
 }
 @media (min-width: 768px) {
     img {

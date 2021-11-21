@@ -24,7 +24,7 @@ color.value = (props.mode === "b50") ? b50RatingColor(props.value) : b40RatingCo
 
 <style lang="less" scoped>
 img {
-    width: 170px;
+    width: 120px;
 }
 @media (min-width: 768px) {
     img {
