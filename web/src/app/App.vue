@@ -6,29 +6,22 @@
 -->
 
 <script lang="ts" setup>
+import { ref } from "vue";
 import { useRouter } from "vue-router";
-import { useStore } from "vuex";
-import Cookie from "js-cookie";
-import MaiDXProberApi from "@/app/data/maidx-prober";
+import { ElConfigProvider } from "element-plus";
+import zhCn from "element-plus/lib/locale/lang/zh-cn";
 
+const locale = ref(zhCn);
 const { push, currentRoute } = useRouter();
-const store = useStore();
-
-if (currentRoute.value.name != "ResultShare") {
-    let userName: string = Cookie.get("USER_NAME") as string
-    const prober = new MaiDXProberApi(userName);
-    (prober.b40()).then(() => {
-        store.commit("setUserName", userName);
-        push({name: "RatingResult"});
-    }).catch(() => {
-        Cookie.remove("USER_NAME");
-        push({name: "UserInput"});
-    });
+if (currentRoute.value.name !== "SharedResult") {
+    push({name: "UserInput"});
 }
 </script>
 
 <template>
-    <router-view />
+    <ElConfigProvider :locale="locale">
+        <router-view />
+    </ElConfigProvider>
 </template>
 
 <style lang="less">
@@ -36,5 +29,12 @@ body {
     background-color: #fcfcfc;
     font-family: Roboto, Noto Sans SC, Noto Sans JP, Microsoft YaHei, '微软雅黑', Arial, sans-serif !important;
     font-weight: 300;
+}
+a {
+    color: #409eff;
+    text-decoration: none;
+}
+img {
+    pointer-events: none;
 }
 </style>
