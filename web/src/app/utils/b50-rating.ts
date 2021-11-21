@@ -18,7 +18,7 @@ import Achievement from "./achievement";
  */
 
 export function b50Rating(ds: number, achievement: number): number {
-    let baseRa: number = 22.4;
+    let baseRa = 22.4;
     if (achievement < Achievement.C) {
         baseRa = 0.0;
     } else if (achievement < Achievement.B) {
@@ -57,10 +57,25 @@ export function b50Rating(ds: number, achievement: number): number {
  */
 
 export function overrideRating(charts: Array<IMusicChart>): Array<IMusicChart> {
-    let arr: Array<IMusicChart> = [];
+    const arr: Array<IMusicChart> = [];
     charts.forEach((music: IMusicChart) => {
         music.ra = b50Rating(music.ds, music.achievements);
         arr.push(music);
     })
     return arr;
+}
+
+/**
+ *  歌曲Rating求和
+ * 
+ *  @param {Array<IMusicChart>} charts 谱面信息数组
+ *  @returns {number}
+ */
+
+export function sumRating(charts: Array<IMusicChart>): number {
+    let ra = 0
+    charts.forEach((music: IMusicChart) => {
+        ra += music.ra
+    })
+    return ra
 }
