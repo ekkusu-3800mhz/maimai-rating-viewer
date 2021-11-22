@@ -115,6 +115,8 @@ function queryB50(): void {
         })
     });
 }
+
+document.documentElement.scrollTop = document.body.scrollTop = 0;
 </script>
 
 <template>
@@ -167,6 +169,7 @@ function queryB50(): void {
             <Footer />
         </el-main>
     </el-container>
+    <el-backtop />
 </template>
 
 <style lang="less" scoped>
