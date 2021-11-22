@@ -18,7 +18,7 @@ class Result extends Migrator {
             ->addColumn('result_uuid', 'uuid', ['limit' => 36, 'null' => false, 'comment' => '成绩UUID'])
             ->addColumn('result_type', 'string', ['null' => false, 'comment' => '成绩类型'])
             ->addColumn('result_body', 'text', ['null' => false, 'comment' => '成绩原始数据包'])
-            ->addColumn('result_save_date', 'date', ['null' => false, 'comment' => '成绩缓存时间戳'])
+            ->addColumn('result_save_time', 'datetime', ['null' => false, 'comment' => '成绩缓存时间戳'])
             ->create();
     }
 
