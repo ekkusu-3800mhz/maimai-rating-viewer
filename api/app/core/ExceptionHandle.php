@@ -12,6 +12,9 @@ use think\exception\ValidateException;
 use think\Response;
 use Throwable;
 
+use app\exception\BadRequest;
+use app\exception\NotFound;
+
 /**
  * 应用异常处理类
  */
@@ -27,6 +30,8 @@ class ExceptionHandle extends Handle
         ModelNotFoundException::class,
         DataNotFoundException::class,
         ValidateException::class,
+        BadRequest::class,
+        NotFound::class,
     ];
 
     /**
@@ -53,7 +58,31 @@ class ExceptionHandle extends Handle
     public function render($request, Throwable $e): Response
     {
         // 添加自定义异常处理机制
-
+        if ($e instanceof BadRequest) {
+            $data = array(
+                'error' => $e->getMessage(),
+            );
+            return failedResponse(400, $data);
+        }
+        if ($e instanceof NotFound) {
+            $data = array(
+                'error' => $e->getMessage(),
+            );
+            return failedResponse(404, $data);
+        }
+        if ($e instanceof Exception) {
+            $data = array(
+                'error' => $e->getMessage(),
+            );
+            if (Env::get('APP_DEBUG')) {
+                $data['debugInfo'] = array(
+                    'file'  => $e->getFile(),
+                    'line'  => $e->getLine(),
+                    'trace' => $e->getTrace(),
+                );
+            }
+            return failedResponse(500, $data);
+        }
         // 其他错误交给系统处理
         return parent::render($request, $e);
     }
