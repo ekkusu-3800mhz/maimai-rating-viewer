@@ -14,7 +14,7 @@ import config from "@/app.config"
  */
 
 export function isDevEnv(): boolean {
-    return !(process.env.NODE_ENV === 'production')
+    return !(process.env.NODE_ENV === 'production');
 }
 
 /**
@@ -24,7 +24,7 @@ export function isDevEnv(): boolean {
  */
 
 export function isDebugMode(): boolean {
-    return config.app.debug
+    return config.app.debug;
 }
 
 /**
@@ -34,7 +34,7 @@ export function isDebugMode(): boolean {
  */
 
 export function baseUrl(): string {
-    return (isDevEnv()) ? config.data.api.devUrl : config.data.api.url
+    return (isDevEnv()) ? config.data.api.devUrl : config.data.api.url;
 }
 
 /**
@@ -45,5 +45,17 @@ export function baseUrl(): string {
  */
 
 export function api(point: string): string {
-    return baseUrl() + point + config.data.api.suffix
+    return baseUrl() + point + config.data.api.suffix;
+}
+
+/**
+ *  构建分享链接
+ * 
+ *  @param {string} resultId 结果ID
+ *  @returns {string}
+ */
+
+export function buildShareUrl(resultId: string): string {
+    const url = (isDevEnv()) ? config.app.devUrl : config.app.url;
+    return url + resultId;
 }
