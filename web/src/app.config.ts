@@ -7,7 +7,9 @@
 
 const config: IConfig = {
     app: {
-        debug: false,
+        debug: true,
+        url: "https://mairating.shinra-dx.plus/",
+        devUrl: "http://localhost:8080/",
     },
     data: {
         api: {
@@ -24,6 +26,8 @@ const config: IConfig = {
 interface IConfig {
     app: {
         debug: boolean;
+        url: string;
+        devUrl: string;
     };
     data: {
         api: {
