@@ -1,7 +1,7 @@
 /**
  *  舞萌DX底分对象查看器 - 应用配置文件
  * 
- *  @author X-buster <shinra.dx@outlook.com>
+ *  @author Shinra DX armed with X-buster <shinra.dx@outlook.com>
  *  @license MIT
  */
 

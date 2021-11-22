@@ -5,7 +5,7 @@ import { IResponse } from "./interface";
 /**
  *  舞萌DX底分对象查看器 - 查分器数据接口封装类
  * 
- *  @author X-buster <shinra.dx@outlook.com>
+ *  @author Shinra DX armed with X-buster <shinra.dx@outlook.com>
  *  @license MIT
  */
 

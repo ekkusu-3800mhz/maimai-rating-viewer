@@ -1,12 +1,28 @@
 import { IMusicChart } from "@/app/data/maidx-prober/interface";
-import Achievement from "./achievement";
 
 /**
  *  舞萌DX底分对象查看器 - B50数据操作函数定义
  * 
- *  @author X-buster <shinra.dx@outlook.com>
+ *  @author Shinra DX armed with X-buster <shinra.dx@outlook.com>
  *  @license MIT
  */
+
+// 枚举达成率
+enum Achievement {
+    C = 50.0,
+    B = 60.0,
+    BB = 70.0,
+    BBB = 75.0,
+    A = 80.0,
+    AA = 90.0,
+    AAA = 94.0,
+    S = 97.0,
+    Sp = 98.0,
+    SS = 99.0,
+    SSp = 99.5,
+    SSS = 100.0,
+    SSSp = 100.5,
+}
 
 /**
  *  把当前版本的Rating转换为Splash Plus的Rating

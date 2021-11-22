@@ -3,7 +3,7 @@ import config from "@/app.config"
 /**
  *  舞萌DX底分对象查看器 - 实用函数定义
  * 
- *  @author X-buster <shinra.dx@outlook.com>
+ *  @author Shinra DX armed with X-buster <shinra.dx@outlook.com>
  *  @license MIT
  */
 

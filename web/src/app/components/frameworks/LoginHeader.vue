@@ -1,7 +1,7 @@
 <!--
     舞萌DX底分对象查看器 - 用户登录页头组件视图
 
-    @author X-buster <shinra.dx@outlook.com>
+    @author Shinra DX armed with X-buster <shinra.dx@outlook.com>
     @license MIT
 -->
 
