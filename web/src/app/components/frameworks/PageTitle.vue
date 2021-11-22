@@ -12,6 +12,7 @@ import { Share, ArrowLeft } from '@element-plus/icons';
 
 const props = defineProps<{
     title: string;
+    shareShow: boolean;
     back: () => void;
     share: () => void;
 }>();
@@ -26,7 +27,7 @@ const props = defineProps<{
                         <el-page-header :icon="ArrowLeft" :content="props.title" @back="props.back" />
                     </el-col>
                     <el-col class="title-btn-group" :xs="4" :sm="8">
-                        <el-icon class="share-icon" :size="20" @click="props.share">
+                        <el-icon class="share-icon" :size="20" @click="props.share" v-if="shareShow">
                             <Share />
                         </el-icon>
                     </el-col>
