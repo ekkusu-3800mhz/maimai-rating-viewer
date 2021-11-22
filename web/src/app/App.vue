@@ -7,15 +7,10 @@
 
 <script lang="ts" setup>
 import { ref } from "vue";
-import { useRouter } from "vue-router";
 import { ElConfigProvider } from "element-plus";
 import zhCn from "element-plus/lib/locale/lang/zh-cn";
 
 const locale = ref(zhCn);
-const { push, currentRoute } = useRouter();
-if (currentRoute.value.name !== "SharedResult") {
-    push({name: "UserInput"});
-}
 </script>
 
 <template>
