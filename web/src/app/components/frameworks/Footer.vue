@@ -7,8 +7,8 @@
 
 <template>
     <div class="page-footer">
-        <p>Made by <a href="https://github.com/sh1nra-dx" target="_blank">Shinra DX</a> armed with X-buster.</p>
-        <p>Powered by <a href="https://v3.vuejs.org" target="_blank">Vue 3.x</a>, <a href="https://element-plus.gitee.io" target="_blank">Element<sup>+</sup></a>, and <a href="https://github.com/Diving-Fish/maimaidx-prober" target="_blank">Diving-Fish/maimaidx-prober</a>.</p>
+        <p>Made by <a href="https://space.bilibili.com/1608642" target="_blank">Shinra DX</a> armed with X-buster.</p>
+        <p>Powered by <a href="https://v3.vuejs.org" target="_blank">Vue 3.x</a>, <a href="https://element-plus.gitee.io" target="_blank">Element<sup>+</sup></a>, and <a href="https://www.diving-fish.com/maimaidx/prober/" target="_blank">Diving-Fish/maimaidx-prober</a>.</p>
         <br>
         <p>Copyrights of All resources from "maimaiでらっくす" is <a href="https://maimai.sega.jp" target="_blank">&copy;SEGA</a>.</p>
     </div>
@@ -22,9 +22,12 @@
 }
 p {
     margin-bottom: -14px;
-    font-size: 16px;
+    font-size: 12px;
 }
 @media (min-width: 768px) {
+    p {
+        font-size: 16px;
+    }
     .page-footer {
         padding-top: 3rem;
         padding-bottom: 3rem;
