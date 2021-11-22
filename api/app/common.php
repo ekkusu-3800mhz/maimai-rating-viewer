@@ -18,7 +18,7 @@ use think\Response;
  */
 
 function successResponse(array $data = array()): Response {
-    if (!empty($data)) {
+    if (empty($data)) {
         $data = array(
             'status' => 'OK',
         );
