@@ -58,6 +58,12 @@ class ExceptionHandle extends Handle
     public function render($request, Throwable $e): Response
     {
         // 添加自定义异常处理机制
+        if ($e instanceof ValidateException) {
+            $data = array(
+                'error' => $e->getError(),
+            );
+            return failedResponse(400, $data);
+        }
         if ($e instanceof BadRequest) {
             $data = array(
                 'error' => $e->getMessage(),
