@@ -2,6 +2,7 @@ import { RouteRecordRaw } from "vue-router";
 
 import UserInput from "@/app/views/UserInput.vue";
 import RatingResult from "@/app/views/RatingResult.vue";
+import SharedResult from "@/app/views/SharedResult.vue";
 import NotFound from "@/app/views/NotFound.vue";
 
 /**
@@ -13,17 +14,25 @@ import NotFound from "@/app/views/NotFound.vue";
 
 const routes: Array<RouteRecordRaw> = [{
     path: "/",
-    name: "UserInput",
-    component: UserInput,
+    redirect: {name: "UserInput"},
+}, {
+    path: "/:resultId",
+    name: "SharedResult",
+    component: SharedResult,
+    props: true,
 }, {
     path: "/result/:mode",
     name: "RatingResult",
     component: RatingResult,
     props: true,
-},{
+}, {
+    path: "/intro",
+    name: "UserInput",
+    component: UserInput,
+}, {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
-    component: NotFound
+    component: NotFound,
 }];
 
 export default routes;
