@@ -17,7 +17,4 @@ class RatingCache extends Model {
     // 指定数据表名称
     protected $name = 'result';
 
-    // 指定主键名称
-    protected $pk = 'result_id';
-
 }
