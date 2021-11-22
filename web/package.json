@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@element-plus/icons": "^0.0.11",
+    "@soerenmartius/vue3-clipboard": "^0.1.2",
     "@types/axios": "^0.14.0",
     "@types/js-cookie": "^3.0.1",
     "axios": "^0.24.0",
