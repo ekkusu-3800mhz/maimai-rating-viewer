@@ -7,7 +7,7 @@
 
 const config: IConfig = {
     app: {
-        debug: true,
+        debug: false,
         url: "https://mairating.shinra-dx.plus/",
         devUrl: "http://localhost:8080/",
     },
