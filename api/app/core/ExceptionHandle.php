@@ -57,25 +57,30 @@ class ExceptionHandle extends Handle
      */
     public function render($request, Throwable $e): Response
     {
-        // 添加自定义异常处理机制
+        /* 添加自定义异常处理机制 */
+
+        // 表单验证失败错误
         if ($e instanceof ValidateException) {
             $data = array(
                 'error' => $e->getError(),
             );
             return failedResponse(400, $data);
         }
+        // 400错误
         if ($e instanceof BadRequest) {
             $data = array(
                 'error' => $e->getMessage(),
             );
             return failedResponse(400, $data);
         }
+        // 404错误
         if ($e instanceof NotFound) {
             $data = array(
                 'error' => $e->getMessage(),
             );
             return failedResponse(404, $data);
         }
+        // 应用运行时发生的其他异常
         if ($e instanceof Exception) {
             $data = array(
                 'error' => $e->getMessage(),
@@ -89,7 +94,8 @@ class ExceptionHandle extends Handle
             }
             return failedResponse(500, $data);
         }
-        // 其他错误交给系统处理
+
+        /* 其他错误交给系统处理 */
         return parent::render($request, $e);
     }
 }

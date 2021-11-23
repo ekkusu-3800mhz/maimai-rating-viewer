@@ -9,11 +9,15 @@
 import { ref, defineProps } from "vue";
 import { b40RatingColor, b50RatingColor } from "@/app/utils/asset-map";
 
+// props定义
 const props = defineProps<{
+    // 成绩表类型
     mode: string;
+    // DX Rating值
     value: number;
 }>();
 
+// 根据成绩表类型选择对应模式，然后根据Rating值解出Rating框的颜色
 const color = ref("");
 color.value = (props.mode === "b50") ? b50RatingColor(props.value) : b40RatingColor(props.value);
 </script>

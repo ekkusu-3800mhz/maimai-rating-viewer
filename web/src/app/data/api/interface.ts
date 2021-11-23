@@ -5,21 +5,25 @@
  *  @license MIT
  */
 
+// 缓存成绩接口请求数据结构
 export interface IResultCacheRequest {
     type: string;
     data: string;
 }
 
+// 缓存成绩接口响应数据结构
 export interface IResultCacheResponse {
     resultId: string;
 }
 
+// 读取成绩接口响应数据结构
 export interface ISharedResultResponse {
     type: string;
     data: string;
     timestamp: string | Date;
 }
 
+// 通用接口错误数据结构
 export interface IError {
     error: string;
     debugInfo?: {

@@ -11,14 +11,21 @@ import { ref, defineProps } from "vue";
 import Rating from "@/app/components/elements/Rating.vue";
 import Grade from "@/app/components/elements/Grade.vue";
 
+// props定义
 const props = defineProps<{
+    // 玩家昵称
     nickName: string;
+    // 成绩表类型
     mode: string;
+    // B40模式下的底分
     b40BaseRating: number;
+    // B40模式下的段位分
     b40GradeRating: number;
+    // B50模式下的总分
     b50Rating: number;
 }>();
 
+// 计算总DX Rating
 const rating = ref(0);
 rating.value = (props.mode === "b50") ? props.b50Rating : (props.b40BaseRating + props.b40GradeRating);
 </script>

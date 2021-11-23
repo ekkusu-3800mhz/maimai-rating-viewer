@@ -7,22 +7,31 @@
 
 const config: IConfig = {
     app: {
+        // 应用调试模式（部署生产环境前请务必关上）
         debug: false,
+        // 生产环境下的应用根URL
         url: "https://mairating.shinra-dx.plus/",
+        // 开发环境下的应用根URL
         devUrl: "http://localhost:8080/",
     },
     data: {
+        // 服务端数据接口
         api: {
+            // 生产环境下的服务端根URL
             url: "https://api.mairating.shinra-dx.plus/",
+            // 开发环境下的服务端根URL
             devUrl: "http://localhost/",
+            // 资源后缀
             suffix: ".json",
         },
+        // 查分器数据接口
         prober: "https://www.diving-fish.com/api/maimaidxprober/query/player",
     }
 };
 
 /* 以下内容请勿修改 */
 
+// 配置对象结构定义
 interface IConfig {
     app: {
         debug: boolean;

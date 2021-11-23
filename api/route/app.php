@@ -10,8 +10,10 @@ use app\middleware\RequestMethod;
  *  @license MIT
  */
 
+// 成绩读取接口
 Route::rule('result/load', 'Api/result')
     ->middleware(RequestMethod::class, 'GET');
 
+// 成绩缓存接口
 Route::rule('result/save', 'Api/cache')
     ->middleware(RequestMethod::class, 'POST');

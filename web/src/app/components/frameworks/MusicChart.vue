@@ -15,10 +15,20 @@ import Combo from "@/app/components/elements/Combo.vue";
 import Rank from "@/app/components/elements/Rank.vue";
 import Sync from "@/app/components/elements/Sync.vue";
 
+// props定义
 const props = defineProps<{
+    // 谱面次序编号
     index: number;
+    // 谱面信息
     chart: IMusicChart;
 }>();
+
+/**
+ *  根据难度类型选择背景颜色
+ * 
+ *  @param {string} difficulty
+ *  @returns {string}
+ */
 
 function chartDifficulty(difficulty: string): string {
     switch (difficulty) {

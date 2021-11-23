@@ -9,7 +9,9 @@
 import { defineProps } from "vue";
 import { rank } from "@/app/utils/asset-map";
 
+// props定义
 const props = defineProps<{
+    // 接受父组件传入的Rank值
     value: string;
 }>();
 </script>

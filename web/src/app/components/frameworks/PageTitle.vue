@@ -10,10 +10,15 @@ import { defineProps } from "vue";
 
 import { Share, ArrowLeft } from '@element-plus/icons';
 
+// props定义
 const props = defineProps<{
+    // 标题
     title: string;
+    // 分享按钮显示标记
     shareShow: boolean;
+    // 返回按钮事件函数
     back: () => void;
+    // 分享按钮事件函数
     share: () => void;
 }>();
 </script>

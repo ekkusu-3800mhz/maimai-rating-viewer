@@ -9,7 +9,9 @@
 import { defineProps } from "vue";
 import { chartType } from "@/app/utils/asset-map";
 
+// props定义
 const props = defineProps<{
+    // 接受父组件传入的谱面类型
     value: string;
 }>();
 </script>
