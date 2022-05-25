@@ -10,7 +10,7 @@ const config: IConfig = {
         // 应用调试模式（部署生产环境前请务必关上）
         debug: false,
         // 生产环境下的应用根URL
-        url: "https://mairating.shinra-dx.plus/",
+        url: "https://rating.xbuster.moe/",
         // 开发环境下的应用根URL
         devUrl: "http://localhost:8080/",
     },
@@ -18,7 +18,7 @@ const config: IConfig = {
         // 服务端数据接口
         api: {
             // 生产环境下的服务端根URL
-            url: "https://api.mairating.shinra-dx.plus/",
+            url: "https://api.rating.xbuster.moe/",
             // 开发环境下的服务端根URL
             devUrl: "http://localhost/",
             // 资源后缀
